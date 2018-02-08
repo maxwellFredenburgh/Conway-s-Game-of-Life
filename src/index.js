@@ -192,51 +192,49 @@ class Main extends React.Component<{}, {width: number, height: number}> {
   render() {
     return (
       <div className="layoutRoot">
-			<div class="title">
-      	<h1 class>Conways Game of Life </h1>
-      	<h3>by Maxwell Fredenburgh</h3>
-			</div>
-			<div class="grid-container">
-			<Buttons
-				playButton={this.playButton}
-				pauseButton={this.pauseButton}
-				slow={this.slow}
-				fast={this.fast}
-				clear={this.clear}
-				seed={this.seed}
-			/>
-				<h1>Rules</h1>
-				<h3>
-				1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.<br /><br />
-				2. Any live cell with two or three live neighbours lives on to the next generation.<br /><br />
-				3. Any live cell with more than three live neighbours dies, as if by overpopulation.<br /><br />
-				4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-				</h3>
-			</div>
-			<div class="container">
-        <Resizable className="box1" height={this.state.height} width={this.state.width}
-        onResize={this.onResize} minConstraints={[200, 200]} maxConstraints={[980, 530]}>
-          <div className="box1" style={{width: this.state.width + 'px', height: this.state.height + 'px'}}>
-            <Universe
-              gridFull={this.state.gridFull}
-              /*rows={this.rows}
-              cols={this.cols}*/
+				<div class="title">
+	      	<h1 class>Conways Game of Life </h1>
+	      	<h3>by Maxwell Fredenburgh</h3>
+				</div>
+				<div class="grid-container">
+					<Buttons
+						playButton={this.playButton}
+						pauseButton={this.pauseButton}
+						slow={this.slow}
+						fast={this.fast}
+						clear={this.clear}
+						seed={this.seed}
+					/>
+						<h1>Rules</h1>
+						<h3>
+						1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.<br /><br />
+						2. Any live cell with two or three live neighbours lives on to the next generation.<br /><br />
+						3. Any live cell with more than three live neighbours dies, as if by overpopulation.<br /><br />
+						4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+						</h3>
+					</div>
+					<div class="container">
+		        <Resizable className="box1" height={this.state.height} width={this.state.width}
+		        onResize={this.onResize} minConstraints={[200, 200]} maxConstraints={[980, 530]}>
+		          <div className="box1" style={{width: this.state.width + 'px', height: this.state.height + 'px'}}>
+		            <Universe
+		              gridFull={this.state.gridFull}
 
-              height={this.state.height}
-              width={this.state.width}
+		              height={this.state.height}
+		              width={this.state.width}
 
-              rows={Math.floor(this.state.height/16)}
-              cols={Math.floor(this.state.width/16)}
+		              rows={Math.floor(this.state.height/16)}
+		              cols={Math.floor(this.state.width/16)}
 
-              selectBox = {this.selectBox}
-            />
-          </div>
-        </Resizable>
-			</div>
-			<div class="notes">
-			<h3>*Use the RED BOX to change the size of the board</h3>
-			<h3>*Use in FULLSCREEN</h3>
-			</div>
+		              selectBox = {this.selectBox}
+		            />
+		          </div>
+		        </Resizable>
+					</div>
+				<div class="notes">
+					<h3>*Use the RED BOX to change the size of the board</h3>
+					<h3>*Use in FULLSCREEN</h3>
+				</div>
       </div>
     );
   }
