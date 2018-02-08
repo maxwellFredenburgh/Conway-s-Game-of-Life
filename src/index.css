@@ -1,0 +1,84 @@
+.react-resizable {
+  position: relative;
+}
+.react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background-color: red;
+  background-position: bottom right;
+  padding: 0 3px 3px 0;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  cursor: se-resize;
+}
+body {
+background-color: #d2efef;
+font-family: sans-serif;
+}
+
+.box {
+  display: inline-block;
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  }
+
+.box1{
+  margin-left: 25%;
+  padding-top: 75px;
+}
+
+.off {
+  background-color: lightgray;
+}
+
+.on {
+  background-color: green;
+}
+
+.box:hover {
+  background: #00CCFF;
+}
+
+.center {
+  margin: auto;
+  display: table;
+  margin-top: 10px;
+}
+.btn{
+  margin: 65px 0px 20px 5px;
+}
+.grid {
+  width: 150px;
+  line-height: 0;
+  /*margin: auto;*/
+  /*margin-top: 20px;*/
+}
+
+.title {
+  color: black;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+.container{
+  background-color:#2c512f;
+  height: 675px;
+}
+.grid-container{
+  width:400px;
+  color: black;
+  float:left;
+  margin-left:50px;
+}
+
+h4 {
+  margin-top: 0px;
+}
